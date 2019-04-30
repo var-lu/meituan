@@ -1,6 +1,6 @@
-import home from "@/views/Home"
-import order from "@/views/Order"
-import my from "@/views/My"
+import home from "@/views/home/index"
+import order from "@/views/order/index"
+import my from "@/views/my/index"
 export default[
     {
         path:"/",
