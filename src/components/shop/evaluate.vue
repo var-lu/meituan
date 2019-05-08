@@ -1,14 +1,15 @@
 <template>
-    <div class="my">
-        我的页面
-        
+    <div>
+        评价
     </div>
 </template>
+
 <script>
 export default {
-    name:"my"
+    name : "shopEvaluate"
 }
 </script>
-<style scoped>
+
+<style>
 
 </style>
