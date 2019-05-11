@@ -18,7 +18,6 @@ import "@/assets/sass/style.scss"
     },
     watch:{
       $route(to,from){
-        console.log(to.path);
         if(to.path === "/shop"){
           this.footNavisShow = false;
         }else{
