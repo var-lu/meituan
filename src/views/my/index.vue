@@ -9,6 +9,10 @@ export default {
     name:"my"
 }
 </script>
-<style scoped>
-
+<style scoped lang="scss">
+    .my{
+        width: 100%;
+        height: 100vh;
+        background: rgb(240, 240, 240);
+    }
 </style>
