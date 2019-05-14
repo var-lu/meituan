@@ -4,7 +4,8 @@
      <!-- <router-link to="/shop">
             <div>店铺</div>
       </router-link>  -->
-    <footNav v-if="footNavisShow"></footNav>
+    <!-- <footNav v-if="footNavisShow"></footNav> -->
+    <footNav v-if="(path=='/'||path=='/my'||path=='/order')"></footNav>
   </div>
 </template>
 <script>
@@ -13,16 +14,21 @@ import "@/assets/sass/style.scss"
       name : "App",
     data(){
       return{
-        footNavisShow:true
+        // footNavisShow:true
+        path:""
       }
+    },
+    mounted(){
+      this.path=this.$route.path;
     },
     watch:{
       $route(to,from){
-        if(to.path === "/shop"){
-          this.footNavisShow = false;
-        }else{
-          this.footNavisShow = true;
-        }
+        // if(to.path === "/shop"){
+        //   this.footNavisShow = false;
+        // }else{
+        //   this.footNavisShow = true;
+        // }
+        this.path=to.path
       }
     }
   }
