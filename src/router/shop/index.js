@@ -2,6 +2,8 @@ import shop from "@/views/shop/index"
 import shopOrder from '@/components/shop/order';
 import shopMerchant from '@/components/shop/merchant';
 import shopEvaluate from '@/components/shop/evaluate';
+import orderPreview from "@/views/orderpreview/index"
+
 export default[
     {
         path:"/shop",
@@ -25,5 +27,10 @@ export default[
                 component:shopEvaluate,
             }
         ]
+    },
+    {
+        path:"/orderpreview",
+        name:"orderpreview",
+        component:orderPreview,
     }
 ]

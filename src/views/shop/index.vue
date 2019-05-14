@@ -40,7 +40,7 @@ export default {
     name : "shopDetail",
     data(){
       return{
-        footNavisShow:false,
+        //footNavisShow:false,
         timer : null,
         swiperOption:{
            direction : 'vertical',
