@@ -17,7 +17,7 @@ export default new Router({
     ...common,
     ...shop,
 
-    ...order
+    ...order,
 
     Error,
     ...my

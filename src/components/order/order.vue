@@ -1,5 +1,6 @@
 <template>
 <div class="order">
+    <!-- 头部 -->
       <div class="orderTop">
         <div class="show">
             <p class="show_one">订单已取消 ></p>
@@ -27,6 +28,49 @@
           </ul>
           </div>
       </div>
+      <!-- 订单明细 -->
+      <div class="orderdetails">
+          订单明细
+      </div>
+      <div class="name-txt">北京麦当劳沙河店</div>
+      <div class="order-price">
+      <p class="price-name"><img src="../../assets/img/zhe.png"/>周末全家满分早餐(周末全家满分早餐)</p>
+      <p class="xiangxi">
+          <span class="count">1份</span>
+          <span class="amount"><del>￥90</del></span>
+          <span class="price">￥66</span>
+      </p>
+      </div>
+      <div class="box-fee">
+          <span>餐盒费</span>
+          <span>￥0</span>
+      </div>
+      <div class="distribution-fee">
+          <span>配送费</span>
+          <span>￥9</span>
+      </div>
+      <div class="order-total">
+        <span class="total-one">总计: ￥99</span>
+        <span class="total-two">优惠：<span>-￥24</span></span>
+        <span class="total-three">实付：<span>￥75</span></span>
+      </div>
+      <!-- 配送信息 -->
+       <div class="orderdetails">
+          配送信息
+      </div>
+      <div class="dellverytime">
+          送餐时间 立即配送
+      </div>
+      <div class="dellveryaddress">
+          <div class="label">配送地址</div>
+          <div class="label-right">
+              <p>李泽涵(先生) 17645083752</p>
+              <p>北京科技职院(1231)</p>
+          </div>
+      </div>
+      <div class="label-with-txt"><span>订单编号</span> <span>1870 0412 0213 1234</span></div>
+      <div class="label-with-txt"><span>下单时间</span> <span>2019-05-20 13:14</span></div>
+      <div class="label-with-txt"><span>支付方式</span> <span>在线支付</span></div>
 </div>
 </template>
 <script>
@@ -37,8 +81,10 @@ export default {
 <style lang="scss" scoped>
      .order{
          width:100%;
-         height:100vh;
          background: #f0f0f0;
+         display: flex;
+         flex:1;
+         flex-direction: column;
       .orderTop{
           width:100%;
           height:1.38rem;
@@ -104,7 +150,7 @@ export default {
                      line-height: 0.25rem;
                      color:#333;
                      margin-bottom: 0.1rem;
-                     border: 1px solid #e3e3e3;
+                     border: 1px solid #dab8b8;
                      width:1.1rem;
                      height:0.25rem;
                      background: #fafafa;
@@ -114,6 +160,174 @@ export default {
         }
        
     }
+     .orderdetails{
+         width:3.99rem;
+         height:0.3rem;
+         color:#333;
+         font-size:15px;
+         padding:0 0 0 0.15rem;
+         text-align: left;
+         line-height:0.3rem;
+     }
+     .name-txt{
+         width:3.84rem;
+         height:0.36rem;
+         padding: 0.05rem 0.15rem;
+         text-align: left;
+         font-size:15px;
+         background:#ffffff;
+         border-bottom: 1px solid #eeeeee;
+         line-height:0.36rem;
+     }
+     .order-price{
+         width:3.84rem;
+         height:0.32rem;
+         background:#ffffff;
+         border-bottom:1px solid #eeeeee;
+         font-size:15px;
+         text-align: left;
+         padding:0 0.15rem;
+         line-height: 0.32rem;
+         display: flex;
+         .price-name{
+             width:2.30rem;
+             height:0.32rem;
+             overflow:hidden;
+             line-height: 0.32rem;
+             img{
+             width:0.13rem;
+             height:0.15rem;
+             margin-right:0.10rem
+           }
+         }
+         .count{
+             display: inline-block;
+             width:0.33rem;
+             height:0.32rem;
+             line-height: 0.32rem;
+             text-align: left;
+         }
+         .amount{
+             display: inline-block;
+             width:0.45rem;
+             height:0.32rem;
+             line-height: 0.32rem;
+             text-align: right;
+             color:#999999;
+         }
+         .price{
+             display: inline-block;
+             width:0.45rem;
+             height:0.32rem;
+             line-height: 0.32rem;
+             text-align: right;
+         }
+     }
+     .box-fee{
+          width:3.84rem;
+         height:0.32rem;
+         background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding:0 0.15rem;
+        border-bottom: 1px solid #eeeeee;
+        font-size:15px;
+        line-height:0.32rem;
+     }
+     .distribution-fee{
+         width:3.84rem;
+         height:0.41rem;
+         background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        padding:0 0.15rem;
+        border-bottom: 1px solid #eeeeee;
+        font-size:15px;
+        line-height: 0.41rem;
+     }
+     .order-total{
+         width:3.84rem;
+         height:0.41rem;
+         border-bottom:1px solid #eeeeee;
+         background:#ffffff;
+         padding:0 0.15rem;
+         display:flex;
+       .total-one{
+           display: block;
+           width:0.65rem;
+           height:0.4rem;
+           line-height:0.4rem;
+           color:#777;
+           font-size:14px;
+           margin-right: 0.1rem;
+       }
+       .total-two{
+           display: block;
+           width:2.03rem;
+           height:0.4rem;
+           line-height:0.4rem;
+           color:#777;
+           font-size:14px;
+           text-align: left;
+           span{
+               color:#ffb000
+           }
+       }
+       .total-three{
+            display: block;
+           width:0.65rem;
+           height:0.4rem;
+           line-height:0.4rem;
+           color:#777;
+           font-size:14px;
+           span{
+               color:#ffb000; 
+           }
+       }
+     }
+     .dellverytime{
+          width:3.84rem;
+         height:0.46rem;
+         background:#ffffff;
+         line-height:0.46rem;
+         font-size:15px;
+         text-align: left;
+         padding:0 0.15rem;
+         border-bottom: 1px solid #eeeeee;
+     }
+     .dellveryaddress{
+         width:3.84rem;
+         height:0.6rem;
+         background:#ffffff;
+         font-size:15px;
+         text-align: left;
+         padding:0 0.15rem;
+         border-bottom: 1px solid #eeeeee;
+        .label{
+            float:left;
+             margin-right:0.1rem;
+        }
+        .label-right{
+            float:left;
+           p{
+               height:0.17rem;
+               margin: 0 0 0.05rem;
+           }
+        }
+     }
+     .label-with-txt{
+         width:3.84rem;
+         height:0.46rem;
+         padding: 0 0.15rem;
+         background:#ffffff;
+         text-align: left;
+         font-size:15px;
+         line-height: 0.46rem;
+         span{
+             margin-right:0.1rem;
+         }
+     }
+
  }
 </style>
 
