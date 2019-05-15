@@ -1,6 +1,8 @@
 import footNav from './common/footNav.vue';
+import componentLazyloading from "./common/loading.vue"
 const components = {
-    footNav
+    footNav,
+    componentLazyloading
 }
 export default{
     install(Vue){

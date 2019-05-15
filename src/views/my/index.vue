@@ -1,21 +1,23 @@
 <template>
     <div class="my">
-        <section class="my_header">
+        <div class="my_header">
             <div><img src="../../assets/img/head-defult.png" alt=""></div>
             <p>测试名</p>
-        </section>
-        <section class="my_nav">
+        </div>
+        <div class="my_nav">
             <ul>
-                <li class="red_package">美团红包</li>
-                <li class="red_package">收货地址</li>
-                <li class="red_package">常见问题</li>
-                <li class="red_package">美团协议与说明</li>
-                <li class="red_package">退出登录</li>
+                <li class="red_package"><router-link to="/my/redpackage"><img src="../../assets/img/my-redpackage.png"><p>美团红包</p></router-link></li>
+                <li class="red_package"><router-link to="/my/address"><img src="../../assets/img/my-address.png"><p>收货地址</p></router-link></li>
+                <li class="red_package"><router-link to="/my/question"><img src="../../assets/img/my-question.png"><p>常见问题</p></router-link></li>
+                <li class="red_package"><router-link to="/my/agreement"><img src="../../assets/img/my-agreement.png"><p>美团协议与说明</p></router-link></li>
+                <li class="red_package"><router-link to="/my/outlogin"><img src="../../assets/img/my-outlogin.png"><p>退出登录</p></router-link></li>
             </ul>
-        </section>
-        <section class="my_phone">
-
-        </section>
+        </div>
+        <div class="my_phone">
+            <div>客服电话：10109777</div>
+            <p>服务时间：9:00-23:00</p>
+        </div>
+        
     </div>
 </template>
 <script>
@@ -57,6 +59,54 @@ export default {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+        }
+        .my_nav{
+            padding-left: 0.12rem;
+            background: #fff;
+            text-align: left;
+            font-size: 14px;
+            li{
+                padding: 0.1rem 0;
+                line-height: 0.2rem;
+                border-bottom: 0.01rem solid #e3e3e3;
+                img{
+                    width: 15px;
+                    display: inline-block;
+                    margin: 3px 10px 0 0;
+                    float: left;
+                }
+                p{
+                    color: #333333;
+                }
+            }
+            li::after{
+                display: inline-block;
+                content: '>';
+                float: right;
+                margin-right: 0.22rem;
+                font-size: 18px;
+                line-height: 0.18rem;
+                color: #AAAAAA;
+                transform: scaleY(1.5) translateY(-75%);
+            }
+            li:nth-last-child(1){
+                border: none;
+            }
+        }
+        .my_phone{
+            font-size: 0.14rem;
+            text-align: center;
+            div{
+                margin-top: 0.2rem;
+                color: #ffb000;
+                padding: 10px 0;
+                background: white;
+            }
+            p{
+                font-size: 12px;
+                padding: 0.1rem 0;
+                color: #999999;
             }
         }
     }
