@@ -11,14 +11,16 @@
 <script>
 import "@/assets/sass/style.scss"
   export default {
-      name : "App",
+    	name : "App",
     data(){
       return{
         // footNavisShow:true
+
         path:""
       }
     },
     mounted(){
+
       this.path=this.$route.path;
     },
     watch:{
@@ -29,7 +31,27 @@ import "@/assets/sass/style.scss"
         //   this.footNavisShow = true;
         // }
         this.path=to.path
+
       }
+    },
+    // 解决刷新页面数据丢失
+    created(){
+      // 从会话存储里再一次获取store
+      if (sessionStorage.getItem("store")) {
+        this.$store.replaceState(
+          Object.assign(
+            {},
+            this.$store.state,
+            JSON.parse(sessionStorage.getItem("store"))
+          )
+        );
+        sessionStorage.removeItem("store")
+      }
+
+      // 监听页面是否刷新刷新了保存store到会话存储里
+      window.addEventListener("beforeunload",()=>{
+        sessionStorage.setItem("store",JSON.stringify(this.$store.state));
+      })
     }
   }
 </script>
