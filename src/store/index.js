@@ -3,6 +3,9 @@ import Vue from "vue"
 import shop from './shop';
 Vue.use(Vuex)
 export default new Vuex.Store({
+    state:{
+        footIndex:0
+    },
     modules:{
         shop
     }

@@ -47,8 +47,12 @@ export default {
     name : "shopDetail",
     data(){
       return{
+<<<<<<< HEAD
         index : 0,
         footNavisShow:false,
+=======
+        //footNavisShow:false,
+>>>>>>> 22f31713004a4cee05bdaebd92b8340714a40605
         timer : null,
         swiperOption:{
            direction : 'vertical',

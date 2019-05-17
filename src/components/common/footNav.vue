@@ -2,21 +2,21 @@
     
     <div id="nav">
       <router-link :class="{active:index==0}" to="/">
-        <div @click="index=0" >
+        <div @click="changeIndex(0)" >
             <div class="def"></div>
             <div :class="{homeActive:index==0}"></div>
             <div>首页</div>
         </div>
       </router-link> 
       <router-link :class="{active:index==1}" to="/order">
-        <div @click="index=1">
+        <div @click="changeIndex(1)">
           <div class="def order-def"></div>
           <div :class="{orderActive:index==1}"></div>
           <div>订单</div>
         </div>
       </router-link>
       <router-link :class="{active:index==2}" to="/my">
-        <div @click="index=2">
+        <div @click="changeIndex(2)">
           <div class="def my-def"></div>
           <div :class="{myActive:index==2}"></div>
           <div>我的</div>
@@ -30,9 +30,21 @@ export default {
     name : "footNav",
     data(){
       return{
-        index:0
+        index:this.$store.state.footIndex
+      }
+    },
+    methods:{
+      changeIndex(index){
+        this.$store.state.footIndex=this.index= index;
       }
     }
+    // beforeMount(){
+    //   console.log(this.$store.state.footIndex)
+    //   this.index=this.$store.state.footIndex;
+    // },
+    // beforeDestroy(){
+    //   this.$store.state.footIndex=this.index;
+    // }
 }
 </script>
 
