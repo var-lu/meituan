@@ -8,10 +8,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import components from './components';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-import Mint from 'mint-ui';
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+import BScroll from 'better-scroll';
+Vue.use(MintUI);
 import VueLazyload from "vue-lazyload";
-
-Vue.use(Mint);
 Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios;

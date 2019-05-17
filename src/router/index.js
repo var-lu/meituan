@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import common from "./common/index"
 import shop from './shop/index';
-
+import home from "./home/index"
 import order from "./order/index"
-
+import seach from "./seach/index"
 import Error from "./error/index";
 import my from "./my/index"
 
@@ -16,9 +16,9 @@ export default new Router({
   routes: [
     ...common,
     ...shop,
-
+    ...seach,
     ...order,
-
+    ...home,
     Error,
     ...my
 
