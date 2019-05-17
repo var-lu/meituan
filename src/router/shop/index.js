@@ -9,18 +9,18 @@ export default[
         component:shop,
         children:[
             {
-                path:"/shop/shopOrder",
+                path:"/shop/",
                 name:"shopOrder",
                 component:shopOrder,
             },
             {
-                path:"/shop/shopMerchant",
+                path:"/shop/shopmerchant",
                 name:"shopMerchant",
                 component:shopMerchant,
             },
             ,
             {
-                path:"/shop/shopEvaluate",
+                path:"/shop/shopevaluate",
                 name:"shopEvaluate",
                 component:shopEvaluate,
             }

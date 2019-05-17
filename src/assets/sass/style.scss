@@ -111,3 +111,15 @@ footer img{
 	height: 0.18rem;
 	margin-right: 0.06rem;
 }
+.el-rate__item .el-rate__icon{
+	width: 0.15rem;
+	height: 0.15rem;
+	margin-right: 0;
+	transform: translateY(-.01rem)
+}
+.el-rate__text{
+	margin-left: 0.1rem;
+}
+#app .mint-popup-bottom{
+	width: 100%;
+}

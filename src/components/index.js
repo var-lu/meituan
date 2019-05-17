@@ -1,6 +1,8 @@
 import footNav from './common/footNav.vue';
+import shopPop from './common/shop/shopPop.vue';
 const components = {
-    footNav
+    footNav,
+    shopPop
 }
 export default{
     install(Vue){
