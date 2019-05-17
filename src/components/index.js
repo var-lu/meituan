@@ -1,11 +1,9 @@
 import footNav from './common/footNav.vue';
-import componentLazyloading from "./common/loading.vue";
-import backTop from "./common/backTop.vue"
-const components = {
+import componentLazyloading from "./common/loading.vue";import shopPop from './common/shop/shopPop.vue';
+import backTop from "./common/backTop.vue"const components = {
     footNav,
     componentLazyloading,
-    backTop
-}
+	backTop,	shopPop}
 export default{
     install(Vue){
         for(var key in components){
