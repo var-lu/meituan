@@ -1,21 +1,24 @@
 <template>
     <div>
-        <div class="order-wrap">
-            <div class="order">
-                <nav>
-                    <a href="javascript:;" class="active">热销</a>
-                    <a href="javascript:;">折扣</a>
-                    <a href="javascript:;">烧烤</a>
-                    <a href="javascript:;">主食</a>
-                    <a href="javascript:;">盖饭</a>
-                    <a href="javascript:;">汤类</a>
-                    <a href="javascript:;">特色</a>
-                    <a href="javascript:;">其他</a>
-                    <a href="javascript:;">汤类</a>
-                    <a href="javascript:;">特色</a>
-                    <a href="javascript:;">其他</a>
-                </nav>
-                
+        <div class="wrapper">
+            <div ref="left">
+                <ul>
+                    <li :class="{active:activeIndex === index}" v-for="(item,index) in left" >
+                        <span class="left-item">{{item}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div ref="right">
+                <ul>
+                    <li v-for="(item) in right">
+                        <h3>{{item.name}}</h3>
+                        <ul>
+                            <li v-for="num in item.content">
+                                <div>{{item.name + num}}</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -23,7 +26,43 @@
 
 <script>
 export default {
-    name : "order"
+    name : "order",
+    data(){
+        return{
+            activeIndex : 0,
+            left:["热销","折扣"],
+            right:[
+                {
+                    name : "乾隆白菜",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "老虎菜",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "皮蛋豆腐",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "夫妻肺片",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "姜汁松花蛋",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "凉拌木耳",
+                    content:['1','2','3','4','5','6']
+                },
+                {
+                    name : "地三鲜盖饭",
+                    content:['1','2','3','4','5','6']
+                },
+            ]
+        }
+    }
 }
 </script>
 

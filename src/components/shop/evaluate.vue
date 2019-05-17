@@ -25,14 +25,7 @@
             </div>
         </div>
         <div class="evaluate-type">
-            <span class="active-type">全部(5336)</span>
-            <span>好评(5336)</span>
-            <span>差评(5336)</span>
-            <span>有图评价(5336)</span>
-             <span>味道赞(5336)</span>
-            <span>服务好(5336)</span>
-            <span>菜品差(5336)</span>
-            <span>贵(5336)</span>
+            <span v-for="(item,i) in evaluateTypeArr" @click="changeType(i)" :class="{'active-type':index === i}">{{item}}</span>
         </div>
         <div class="evaluate-detail">
             <ul>
@@ -171,8 +164,15 @@ export default {
      data() {
       return {
         value: 4.5,
-        texts : ["口味","包装"]
+        index : 0,
+        texts : ["口味","包装"],
+        evaluateTypeArr : ['全部(5336)','好评(5336)','差评(5336)','有图评价(5336)','味道赞(5336)','服务好(5336)','菜品差(5336)','贵(5336)']
       }
+    },
+    methods:{
+        changeType(i){
+            this.index = i;
+        }
     }
 }
 </script>
