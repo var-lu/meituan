@@ -1,8 +1,10 @@
 import footNav from './common/footNav.vue';
-import componentLazyloading from "./common/loading.vue"
+import componentLazyloading from "./common/loading.vue";
+import backTop from "./common/backTop.vue"
 const components = {
     footNav,
-    componentLazyloading
+    componentLazyloading,
+    backTop
 }
 export default{
     install(Vue){

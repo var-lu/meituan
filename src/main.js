@@ -20,7 +20,7 @@ Vue.use(components);
 // 自定义懒加载
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: './assets/img/error.jpeg',
+  error: './assets/img/img-error.jpeg',
   loading: './assets/img/shop-lazyload.png',
   attempt: 1
   })
