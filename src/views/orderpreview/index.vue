@@ -1,9 +1,10 @@
 <template>
 	<div class="order_preview">
-		<div class="order_header">
+		<!--<div class="order_header">
 			<i></i>
 			<span>提交订单</span>
-		</div>
+		</div>-->
+		<backTop class="order_header" topBg="#fff" topColor="#333" routeName="/shop" topName="提交订单"></backTop>
 		<div class="order_section">
 			<div class="order_inner_section">
 				<div class="order_preview_head">
@@ -62,10 +63,11 @@
 		</div>
 		<div class="order_footer">
 			<div class="order_footer_left">
+				<span class="of_discount">已优惠 ¥13.5</span>
 				<span class="order_total">合计<i>¥<a>41</a></i></span>
 			</div>
 			<div class="order_footer_right">
-				<button class="order_submit">
+				<button class="order_submit" @click="goOrder">
 					<span>提交订单</span>
 				</button>
 			</div>
@@ -75,33 +77,25 @@
 
 <script>
 	export default {
-		name: "orderPreview"
+		name: "orderPreview",
+		methods:{
+			//去往订单界面
+			goOrder(){
+      			this.$router.push("/order");
+			}
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
 	.order_preview {
-		.left{
-			float: left;
-		}
-		.right{
-			float: right;
-		}
-		img{
-			border-style: none;
-			display: block;
-		}
-		font-family: Hiragino Sans GB, Arial, Helvetica, "\5B8B\4F53", sans-serif;
-		margin: 0;
-		padding: 0;
-		font-size: 14px;
 		color: #333;
 		width: 100%;
 		height: 100vh;
 		display: flex;
 		justify-content: space-between;
 		flex-direction: column;
-		.order_header {
+		/*.order_header {
 			z-index: 1000;
 			height: 0.5rem;
 			display: flex;
@@ -118,14 +112,14 @@
 				padding: 0.18rem 0.4rem 0.18rem 0;
 				width: 100%;
 			}
-		}
+		}*/
 		.order_section {
 			flex: 1;
 			overflow: auto;
 			width: 100%;
 			.order_inner_section{
 				background-color: #F4F4F4;
-				min-height: 40rem;
+				min-height: 100vh;
 				padding: 0 0.1rem 0;
 			    overflow:hidden;
 				.order_preview_head{
@@ -292,25 +286,25 @@
     						padding: 0 0.1rem;
     						display: flex;
 				    		justify-content: space-between;
-				    		margin-bottom: 20px;
-				    		height: 20px;
-						    line-height: 20px;
+				    		margin-bottom: 0.2rem;
+				    		height: 0.2rem;
+						    line-height: 0.2rem;
     					}
     					.opm_fee_line{
     						position: absolute;
-    						top: 40px;
-    						height: 2px;
+    						top: 0.4rem;
+    						height: 0.02rem;
     						width: 100%;
     						left: 0;
-						    border-bottom: 2px dashed #d7d7d7;
+						    border-bottom: 0.02rem dashed #d7d7d7;
 						    i{
 						    	position: absolute;
-							    height: 12px;
-							    width: 12px;
-							    top: -6px;
+							    height: 0.12rem;
+							    width: 0.12rem;
+							    top: -0.06rem;
 							    background-color: #f4f4f4;
 							    border-radius: 50%;
-							    bottom: -9px;
+							    bottom: -0.09rem;
 						    }
 						    i:nth-child(1){
 						    	left: -0.05rem;
@@ -323,14 +317,14 @@
     						padding: 0 0.1rem;
 						    >div{
 						    	display: flex;
-						    	padding: 12px 0 12px 0;
-						    	line-height: 20px;
+						    	padding: 0.12rem 0 0.12rem 0;
+						    	line-height: 0.2rem;
 						    	>span:nth-child(1){
 								    flex: 1;
 								    text-align: right;
 								    font-size: 12px;
 								    color: #999;
-								    padding-right: 15px;
+								    padding-right: 0.15rem;
 						    	}
 						    	span:nth-child(2){
 						    		text-align: right;
@@ -349,17 +343,29 @@
 			}
 		}
 		.order_footer {
+			display: flex;
+			justify-content: space-between;
 			height: 0.5rem;
-			background-color: #ceb;
+			background-color: #fff;
 			position: relative;
 			font-size: 16px;
 			.order_footer_left{
-				float: left;
-				width: 75%;
-				position: absolute;
-			    top: 0.17rem;
-			    right: 0.15rem;
+				flex: 1;
+				position: relative;
+				margin-right: 1.25rem;
+				padding: 0 0.15rem;
 			    color: #333;
+			    .of_discount{
+			    	font-size: 14px;
+			    	position: absolute;
+			    	top: 0.18rem;
+    				left: 0.15rem;
+			    }
+			    .order_total{
+			    	position: absolute;
+				    top: 0.17rem;
+				    right: 0.15rem;
+			    }
 			    .order_total i{
 					color: #FB4E44;
 				    font-style: normal;
@@ -367,9 +373,11 @@
 				}
 			}
 			.order_footer_right{
-				float: right;
-				width: 25%;
+				position: absolute;
+				right: 0;
+				width: 1.25rem;
 				.order_submit{
+					font-size: 16px;
 					height: 0.5rem;
 			    	width: 100%;
 				    border-radius: 0;
