@@ -6,10 +6,11 @@ import axios from "axios"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import components from './components';
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
+import Vant from "vant";
 import BScroll from 'better-scroll';
 Vue.use(MintUI);
 import VueLazyload from "vue-lazyload";
@@ -18,6 +19,7 @@ Vue.config.productionTip = false
 Vue.prototype.$axios=axios;
 Vue.use(ElementUI);
 Vue.use(components);
+Vue.use(Vant);
 // 自定义懒加载
 Vue.use(VueLazyload, {
   preLoad: 1.3,
