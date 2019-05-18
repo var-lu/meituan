@@ -5,15 +5,15 @@ import backTop from "./common/backTop.vue";
 import homeNav from './common/homeNav.vue';
 const components = {
 	backTop,
-	shopPop,
+    shopPop,
+    componentLazyloading,
     homeNav,
-    footNav,
-    componentLazyloading
-};
+    footNav
+}
 export default{
     install(Vue){
         for(var key in components){
             Vue.component(key,components[key])
         }
     }
-}
+} 
