@@ -1,4 +1,5 @@
-import home from "@/views/home/aaaa"
+import home from "@/views/home/aaaa";
+
 
 export default[
     {
