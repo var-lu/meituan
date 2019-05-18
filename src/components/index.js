@@ -9,9 +9,7 @@ const components = {
     homeNav,
     footNav,
     componentLazyloading
-};
-export default{
-    install(Vue){
+};    install(Vue){
         for(var key in components){
             Vue.component(key,components[key])
         }
