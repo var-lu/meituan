@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="add_address">
-      <button>
+      <button @click.prevent="$router.push('/my/address/addAddress')">
         <i></i>
         新增收货地址
       </button>

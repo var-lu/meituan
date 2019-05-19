@@ -3,6 +3,7 @@ import address from "@/components/my/address";
 import question from "@/components/my/question";
 import agreement from "@/components/my/agreement";
 import editAddress from "@/components/my/editAddress";
+import addAddress from "@/components/my/addAddress"
 export default[
     {
         path:"/my/redpackage",
@@ -35,5 +36,10 @@ export default[
         path:"/my/address/editaddress",
         name:"editAddress",
         component:editAddress
+    },
+    {
+        path:"/my/address/addAddress",
+        name:"addAddress",
+        component:addAddress
     }
 ]
