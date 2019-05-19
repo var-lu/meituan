@@ -10,7 +10,7 @@
                 <li class="red_package"><router-link to="/my/address"><img src="../../assets/img/my-address.png"><p>收货地址</p></router-link></li>
                 <li class="red_package"><router-link to="/my/question"><img src="../../assets/img/my-question.png"><p>常见问题</p></router-link></li>
                 <li class="red_package"><router-link to="/my/agreement"><img src="../../assets/img/my-agreement.png"><p>美团协议与说明</p></router-link></li>
-                <li class="red_package"><router-link to="/my/outlogin"><img src="../../assets/img/my-outlogin.png"><p>退出登录</p></router-link></li>
+                <li class="red_package"><router-link to="/my/outlogin"><img src="../../assets/img/my-outlogin.png"><p @click="outlogin()">退出登录</p></router-link></li>
             </ul>
         </div>
         <div class="my_phone">
@@ -22,7 +22,18 @@
 </template>
 <script>
 export default {
-    name:"my"
+    name:"my",
+    data(){
+        return {
+            isShow : false
+        }
+    },
+    methods: {
+        outlogin(){
+            console.log(1)
+            this.$store.commit("OUT_LOGIN")
+        }
+    },
 }
 </script>
 <style scoped lang="scss">

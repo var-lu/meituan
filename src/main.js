@@ -10,6 +10,30 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import Mint from 'mint-ui';
 import VueLazyload from "vue-lazyload";
+import Login from "./views/Login/index"
+import { from } from '_array-flatten@2.1.2@array-flatten';
+Vue.prototype.$axios = axios
+//增加token验证
+axios.interceptors.request.use(config=>{
+  config.headers = {
+    "authorization":localStorage.token
+  }
+  return config
+})
+//路由拦截
+router.beforeEach((to,from,next)=>{
+  if(to.meta.isAuthorization){
+    if(localStorage.token){
+      next()
+    }else{
+      store.commit("OUT_LOGIN")
+    }
+  }else{
+    //不需要
+    next()
+  }
+})
+
 
 Vue.use(Mint);
 Vue.use(VueAwesomeSwiper);
@@ -27,6 +51,6 @@ Vue.use(VueLazyload, {
 new Vue({
   router,
   store,
-  render: function (h) { return h(App) }
+  render: function (h) { return h(this.$store.state.login.token?App:Login) }
 }).$mount('#app')
 

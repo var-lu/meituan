@@ -79,6 +79,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+     div{
+         box-sizing: border-box;
+     }
+     p{
+         box-sizing: border-box;
+     }
+     span{
+         box-sizing: border-box;
+     }
      .order{
          width:100%;
          background: #f0f0f0;
@@ -161,7 +170,8 @@ export default {
        
     }
      .orderdetails{
-         width:3.99rem;
+         box-sizing: border-box;
+         width:100%;
          height:0.3rem;
          color:#333;
          font-size:15px;
@@ -170,7 +180,7 @@ export default {
          line-height:0.3rem;
      }
      .name-txt{
-         width:3.84rem;
+         width:3.74rem;
          height:0.36rem;
          padding: 0.05rem 0.15rem;
          text-align: left;
@@ -180,7 +190,7 @@ export default {
          line-height:0.36rem;
      }
      .order-price{
-         width:3.84rem;
+         width:3.74rem;
          height:0.32rem;
          background:#ffffff;
          border-bottom:1px solid #eeeeee;
@@ -224,7 +234,7 @@ export default {
          }
      }
      .box-fee{
-          width:3.84rem;
+          width:3.74rem;
          height:0.32rem;
          background: #ffffff;
         display: flex;
@@ -235,7 +245,7 @@ export default {
         line-height:0.32rem;
      }
      .distribution-fee{
-         width:3.84rem;
+         width:3.74rem;
          height:0.41rem;
          background: #ffffff;
         display: flex;
@@ -246,7 +256,7 @@ export default {
         line-height: 0.41rem;
      }
      .order-total{
-         width:3.84rem;
+         width:3.74rem;
          height:0.41rem;
          border-bottom:1px solid #eeeeee;
          background:#ffffff;
@@ -254,7 +264,7 @@ export default {
          display:flex;
        .total-one{
            display: block;
-           width:0.65rem;
+           width:0.75rem;
            height:0.4rem;
            line-height:0.4rem;
            color:#777;
@@ -263,7 +273,7 @@ export default {
        }
        .total-two{
            display: block;
-           width:2.03rem;
+           width:1.70rem;
            height:0.4rem;
            line-height:0.4rem;
            color:#777;
@@ -275,7 +285,7 @@ export default {
        }
        .total-three{
             display: block;
-           width:0.65rem;
+           width:0.75rem;
            height:0.4rem;
            line-height:0.4rem;
            color:#777;
@@ -286,7 +296,7 @@ export default {
        }
      }
      .dellverytime{
-          width:3.84rem;
+          width:3.74rem;
          height:0.46rem;
          background:#ffffff;
          line-height:0.46rem;
@@ -296,7 +306,7 @@ export default {
          border-bottom: 1px solid #eeeeee;
      }
      .dellveryaddress{
-         width:3.84rem;
+         width:3.74rem;
          height:0.6rem;
          background:#ffffff;
          font-size:15px;
@@ -316,7 +326,7 @@ export default {
         }
      }
      .label-with-txt{
-         width:3.84rem;
+         width:3.74rem;
          height:0.46rem;
          padding: 0 0.15rem;
          background:#ffffff;

@@ -52,7 +52,8 @@ export default {
 <style lang="scss" scoped>
   
     .outmost{
-      width:4.14rem;
+      box-sizing: border-box;
+      width:100%;
       height:1.74rem;                                                           
       padding: 0 0 0 0.15rem;
       background: #ffffff;
@@ -60,7 +61,7 @@ export default {
       border-bottom: 1px solid #d7d7d7;
       margin-bottom:0.1rem;
      .up{
-       width:3.99rem;
+       width:100%;
        height:0.55rem;
        padding:0.1rem 0;
        border-bottom:1px solid #eeeeee;
@@ -72,8 +73,9 @@ export default {
        border-radius: 50%;
       }
       .mdlname{
+        box-sizing: border-box;
         font-size: 16px;
-        width:3.45rem;
+        width:3rem;
         height:0.35rem;
         float:right;
         text-align: left;

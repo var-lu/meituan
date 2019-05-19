@@ -84,7 +84,7 @@ export default {
     padding-bottom: 0.2rem;
     min-height: 0.8rem;
     background-color: white;
-    .shop-header{
+    .shop-header{ 
       position: relative;
       padding-left: 0.95rem;
       padding-top: 0.05rem;
