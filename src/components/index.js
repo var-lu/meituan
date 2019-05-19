@@ -3,12 +3,14 @@ import componentLazyloading from "./common/loading.vue";
 import shopPop from './common/shop/shopPop.vue';
 import backTop from "./common/backTop.vue";
 import homeNav from './common/homeNav.vue';
+import outLogin from "./common/outLogin.vue";
 const components = {
 	backTop,
     shopPop,
     componentLazyloading,
     homeNav,
-    footNav
+    footNav,
+    outLogin
 };
 export default{
     install(Vue){

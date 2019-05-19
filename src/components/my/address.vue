@@ -13,7 +13,7 @@
             <span>16622908939</span>
           </p>
         </div>
-        <div class="edit"></div>
+        <div class="edit" @click="$router.push('/my/address/editaddress')"></div>
       </div>
     </div>
     <div v-show="false" class="no_address">
@@ -35,7 +35,13 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      addAddressShow:false
+    }
+  }
+};
 </script>
 <style lang="scss" scoped>
 .address {
@@ -107,6 +113,7 @@ export default {};
     border-top: 1px solid #d7d7d7;
     button {
       height: 100%;
+      outline: none;
       font-size: 16px;
       cursor: pointer;
       background: none;

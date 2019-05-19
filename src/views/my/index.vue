@@ -10,19 +10,25 @@
                 <li class="red_package"><router-link to="/my/address"><img src="../../assets/img/my-address.png"><p>收货地址</p></router-link></li>
                 <li class="red_package"><router-link to="/my/question"><img src="../../assets/img/my-question.png"><p>常见问题</p></router-link></li>
                 <li class="red_package"><router-link to="/my/agreement"><img src="../../assets/img/my-agreement.png"><p>美团协议与说明</p></router-link></li>
-                <li class="red_package"><router-link to="/my/outlogin"><img src="../../assets/img/my-outlogin.png"><p>退出登录</p></router-link></li>
+                <li class="red_package" @click="outLoginShow=true"><img src="../../assets/img/my-outlogin.png"><p>退出登录</p></li>
             </ul>
         </div>
         <div class="my_phone">
             <div>客服电话：10109777</div>
             <p>服务时间：9:00-23:00</p>
         </div>
-        
+        <!-- 退出登录 -->
+        <outLogin v-show="outLoginShow" :isShow.sync="outLoginShow"></outLogin>
     </div>
 </template>
 <script>
 export default {
-    name:"my"
+    name:"my",
+    data(){
+        return {
+            outLoginShow:false
+        }
+    }
 }
 </script>
 <style scoped lang="scss">
@@ -90,9 +96,7 @@ export default {
                 color: #AAAAAA;
                 transform: scaleY(1.5) translateY(-75%);
             }
-            li:nth-last-child(1){
-                border: none;
-            }
+            li:nth-last-child(1){border: none;}
         }
         .my_phone{
             font-size: 0.14rem;

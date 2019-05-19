@@ -9,7 +9,8 @@
   </div>
 </template>
 <script>
-import "@/assets/sass/style.scss"
+import "@/assets/sass/style.scss";
+import "@/assets/iconfont/iconfont.css";
   export default {
     	name : "App",
     data(){
