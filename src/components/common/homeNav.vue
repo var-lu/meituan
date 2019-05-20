@@ -20,7 +20,7 @@
 
       <ul class="section_ul3">
         <li @click="dianpu">
-          <a href="#" class="ul3_a1">
+          <a href="javascript:;" class="ul3_a1">
             <div class="ul3_a1_div1">
               <img
                 src="http://p0.meituan.net/xianfu/aa86bc1b9a218ea5e094b861c03b59b94873.jpg"
@@ -70,7 +70,7 @@
           </a>
         </li>
         <li @click="dianpu"> 
-          <a href="#" class="ul3_a1">
+          <a href="javascript:;" class="ul3_a1">
             <div class="ul3_a1_div1">
               <img
                 src="http://p0.meituan.net/waimaipoi/f27d6d8cb56bd88812eaf212de7c872a159744.jpg"
@@ -120,7 +120,7 @@
           </a>
         </li>
         <li @click="dianpu"> 
-          <a href="#" class="ul3_a1">
+          <a href="javascript:;" class="ul3_a1">
             <div class="ul3_a1_div1">
               <img
                 src="http://p0.meituan.net/waimaipoi/f27d6d8cb56bd88812eaf212de7c872a159744.jpg"
@@ -170,7 +170,7 @@
           </a>
         </li>
         <li @click="dianpu"> 
-          <a href="#" class="ul3_a1">
+          <a href="javascript:;" class="ul3_a1">
             <div class="ul3_a1_div1">
               <img
                 src="http://p0.meituan.net/waimaipoi/f27d6d8cb56bd88812eaf212de7c872a159744.jpg"
@@ -220,7 +220,7 @@
           </a>
         </li>
         <li @click="dianpu"> 
-          <a href="#" class="ul3_a1">
+           <a href="javascript:;" class="ul3_a1">
             <div class="ul3_a1_div1">
               <img
                 src="http://p0.meituan.net/waimaipoi/f27d6d8cb56bd88812eaf212de7c872a159744.jpg"
