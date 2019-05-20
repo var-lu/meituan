@@ -9,7 +9,8 @@
   </div>
 </template>
 <script>
-import "@/assets/sass/style.scss"
+import "@/assets/sass/style.scss";
+import "@/assets/iconfont/iconfont.css";
   export default {
     	name : "App",
     data(){
@@ -56,7 +57,7 @@ import "@/assets/sass/style.scss"
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #app{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

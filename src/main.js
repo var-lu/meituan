@@ -6,9 +6,12 @@ import axios from "axios"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import components from './components';
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'
-import Mint from 'mint-ui';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
+import BScroll from 'better-scroll';
+Vue.use(MintUI);
 import VueLazyload from "vue-lazyload";
 import Login from "./views/Login/index"
 import { from } from '_array-flatten@2.1.2@array-flatten';
@@ -35,8 +38,7 @@ router.beforeEach((to,from,next)=>{
 })
 
 
-Vue.use(Mint);
-Vue.use(VueAwesomeSwiper);
+Vue.use(Mint);Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios;
 Vue.use(ElementUI);
@@ -44,7 +46,7 @@ Vue.use(components);
 // 自定义懒加载
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: './assets/img/error.jpeg',
+  error: './assets/img/img-error.jpeg',
   loading: './assets/img/shop-lazyload.png',
   attempt: 1
   })

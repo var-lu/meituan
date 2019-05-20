@@ -1,5 +1,6 @@
 body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
-body{font:12px "宋体","Arial Narrow",HELVETICA/*兼容蘋果沒有微軟雅黑*/;background:#fff;}
+// body{font:14px "宋体","Arial Narrow",HELVETICA/*兼容蘋果沒有微軟雅黑*/;background:#fff;}
+body{font-size:14px;font-family: "PingFangSC-Regular", "Hiragino Sans GB", Arial, Helvetica, "\5B8B\4F53", sans-serif;}
 a{text-decoration:none;}
 em{font-style:normal;}
 li{list-style:none;}
@@ -7,12 +8,13 @@ img{border:0;vertical-align:middle;}
 p{word-wrap:break-word}/*給英文強制換行*/
 h1,h2,h3,h4,h5,h6{line-height: none;}
 .noborder{border:0;}
-.left{floaT:left;}
+.left{float:left;}
 .right{float:right;}
 .clearBoth{clear:both;}
-*{box-sizing: border-box;}
-html,body,.box{width: 100%;height: 100%;}
+div{box-sizing: border-box;}
+html,body{width: 100%;height: 100%;}
 html{font-size: 26.67vw;}
+
 .box{
 	display: flex;
 	justify-content: space-between;
@@ -27,6 +29,7 @@ header{
 	justify-content: space-between;
 	padding: 0 0.18rem;
 }
+
 
 /*主体*/
 section{
@@ -111,3 +114,4 @@ footer img{
 	height: 0.18rem;
 	margin-right: 0.06rem;
 }
+
