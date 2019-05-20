@@ -59,6 +59,34 @@
 						</div>
 					</div>
 				</div>
+				<div class="opm_pay">
+					<div class="pay_choice">
+						<div class="opm_pay_inner pay_method">
+							<p><span>支付方式</span><span>在线支付</span></p>
+						</div>
+						<div class="opm_pay_inner">
+							<i></i>
+							<p><span>餐具数量</span><span>1人</span></p>
+						</div>
+						<div class="opm_pay_inner">
+							<i></i>
+							<p><span>备注</span><span class="ask">口味、偏好等要求</span></p>
+						</div>
+						<van-switch-cell v-model="checked" title="发票" class="pay_receipt" title-style="text-align:left;" />
+						<van-cell-group class="pay_group">
+							<div class="opm_pay_inner">
+								<p>
+									<input class="pay_name" type="text" placeholder="请填写个人或公司名称" />
+								</p>
+							</div>
+							<div class="opm_pay_inner">
+								<p>
+								<input class="pay_identify_num" type="text" placeholder="请填写纳税人识别号（选填）" />
+								</p>
+							</div>
+						</van-cell-group>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="order_footer">
@@ -78,6 +106,11 @@
 <script>
 	export default {
 		name: "orderPreview",
+		data(){
+		    return {
+		      checked: false
+		    }
+		},
 		methods:{
 			//去往订单界面
 			goOrder(){
@@ -339,6 +372,66 @@
     					}
 				    }
 					
+				}
+				.opm_pay{
+					width: 100%;
+				    background-color: #fff;
+				    margin: 0.2rem 0 0.1rem;
+				    .pay_choice{
+				    	padding: 0 0.1rem;
+				    }
+				    .van-cell{
+						padding: 0.1rem 0;
+					}
+					.van-switch--on{
+						background: #ffd300;;
+					}
+				    .opm_pay_inner{
+						padding: 0.15rem 0.18rem 0.15rem 0;
+					    display: flex;
+					    position: relative;
+					    line-height: 0.2rem;
+						overflow: hidden;
+						p{
+							flex: 1;
+							display: flex;
+							justify-content: space-between;
+							.ask{
+								font-size: 14px;
+								color: #999;
+							}
+							input{
+								border: 0;
+								height: 20px;
+    							width: 100%;
+							}
+						}
+						i{
+							top: 50%;
+						    right: 0;
+						    margin-top: -0.05rem;
+						    display: inline-block;
+						    height: 0.11rem;
+						    width: 0.06rem;
+						    background: url(../../assets/img/orderpreview/right-select.png) no-repeat ;
+						    background-size: 0.06rem 0.11rem;
+						    position: absolute;
+						}
+				    }	
+				    .opm_pay_inner::before,.pay_receipt::before{
+					    content: '';
+					    position: absolute;
+					    top: -50%;
+					    bottom: -50%;
+					    left: -50%;
+					    right: -50%;
+					    -webkit-transform: scale(0.5);
+					    transform: scale(0.5,0.5);
+					    border-top: 0.02rem solid #E4E4E4;
+				    }
+				    .pay_method::before{
+				    	border:none;
+				    }
 				}
 			}
 		}

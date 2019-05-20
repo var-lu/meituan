@@ -1,4 +1,3 @@
-module.exports = {
     devServer:{
         open:true,
         proxy:{
@@ -10,5 +9,6 @@ module.exports = {
                 }
             }
         }
+
     }
 }
