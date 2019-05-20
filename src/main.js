@@ -11,8 +11,7 @@ import 'swiper/dist/css/swiper.css';
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import {SwitchCell, Cell, CellGroup} from "vant";
-import 'vant/lib/index.css';
-import BScroll from 'better-scroll';
+import 'vant/lib/index.css';import BScroll from 'better-scroll';
 Vue.use(MintUI);
 import VueLazyload from "vue-lazyload";
 Vue.use(VueAwesomeSwiper);
@@ -21,7 +20,6 @@ Vue.prototype.$axios=axios;
 Vue.use(ElementUI);
 Vue.use(components);
 Vue.use(SwitchCell).use(CellGroup).use(Cell);
-
 // 自定义懒加载
 Vue.use(VueLazyload, {
   preLoad: 1.3,
