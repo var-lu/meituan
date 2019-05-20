@@ -91,32 +91,32 @@ export default {
 <style scoped lang = "scss">
 header { 
   width: 100%;
-  height: 0.5rem;
-  background: black;
+  height: 0.38rem;
+  background: #1c1b20;
   padding: 0.06rem;
   position: fixed;
   z-index: 9999;
   h3 {
     display: inline-block;
-    padding-bottom: 0.3rem;
-    font-size: 15px;
-    width: 1.5rem;
+    font-size: 16px;
+    width: 1.8rem;
     color: #fff;
     float: left;
   }
   .h_e_input {
-    width: 60%;
+    width: 1.75rem;
     position: relative;
     border: none;
     height: 0.27rem;
-    padding-left: 0.3rem;
+    padding:0 0.3rem;
     box-sizing: border-box;
     border-radius: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-right: 0.3rem;
     font-size: 14px;
     opacity: 1;
+    margin-right:0.15rem;
+    margin-top:0.1rem
   }
 }
 section {

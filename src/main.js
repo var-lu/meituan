@@ -37,9 +37,7 @@ router.beforeEach((to,from,next)=>{
     next()
   }
 })
-
-
-Vue.use(Mint);Vue.use(VueAwesomeSwiper);
+Vue.use(VueAwesomeSwiper);
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios;
 Vue.use(ElementUI);
